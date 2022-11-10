@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+    <head>
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <title>Spotify</title>
+        <meta charset="utf-8">  
+        <meta name="author" content="Naiara">
+        <meta name="description" content="aprendizado">
+        <meta name="keywords" content="html5,tecnologia">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700;800;900&family=Nunito:wght@300;400;500;700&family=Open+Sans:wght@300&family=Red+Hat+Text:wght@700&family=Source+Sans+Pro:wght@200&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    </head>
+
+    <body id="bgBody">
+        <header class="main-header">
+            <div class="logo">
+                <a href="#" class="imagem-link">
+                    <img  class="imagem-spotify" src="icons/spotify-seeklogo.com.svg" alt="spotify-logo">
+                </a>
+            </div>
+
+            <div class="menu ">
+                <ul class="menu-list">
+                    <li><a href="#" class="a-menu ">
+                        <img class="icons mt-2 mb-3 mr-2" src="icons/bxs-home.svg" alt="icone home">
+                        Início
+                    </a></li>
+                    <li><a href="#" class="a-menu">
+                        <img class="icons mb-3 mr-2" src="icons/bx-search.svg" alt="icone busca">
+                        Buscar
+                    </a></li>
+                    <li><a href="#" class="a-menu">
+                        <img class="icons mb-3 mr-2" src="icons/bx-library.svg" alt="icone livraria">
+                        Sua Biblioteca
+                    </a></li>
+                </ul>
+            </div>
+            
+            
+            <ul class="menu-person">
+                <li><a href="#" class="a-menu">
+                    <img class="icons mt-2 mb-3 mr-2" src="icons/icons8-plus.svg" alt="icone mais">
+                    Criar playlist
+                </a></li>
+             
+                <li><a href="#" class="a-menu">
+                        <img class="icons mb-3 mr-2" src="icons/bxs-heart.svg" alt="icone coracao">
+                        Músicas Curtidas
+                </a></li>
+                
+                <li><a href="#" class="a-menu">
+                        <img class="icons mb-3 mr-2" src="icons/bx-tag.svg" alt="icone tag">
+                        Seus episódios
+                </a></li>  
+            </ul>  
+            <hr class="ml-5 mb-3 mr-2">
+            <div class="historico">
+                <ul class="menu-historico">
+                    <li class="mt-3 mb-3 ">Favoritas/2022</li>
+                    <li class="mb-3 ">A mãe/Dudi <img class="icons icon-speaker " src="icons/speaker-47.svg" alt="icone speaker"></li>
+                    <li class="mb-3 ">Best of Indie 2014</li>
+                    <li class="mb-3 ">Mix Cage The Elephant</li>
+                    <li class="mb-3 ">Descobertas da semana</li>
+                    <li class="mb-3 ">As mais tocadas de 2021</li>
+                    <li class="mb-3 ">Faixas do Shazan</li> 
+                </ul>
+            </div>
+            <div class="app mt-3 ml-4 mb-5 mr-2">
+                <a href="#" class="a-menu">
+                    <img class="icons" src="icons/bx-down-arrow-alt.svg" alt="icone seta">
+                    Instalar aplicativo
+                </a>
+
+            </div>
+        </header>
+
+        <main>
+            <div class="nav">  
+                
+                <nav id="bgNav" class="top-nav">
+                    <ul class="seta">
+                        <li><a href="#"><img src="icons/bx-chevron-left.svg" alt="seta"></a></li>
+                        <li><a href="#"><img src="icons/bx-chevron-right.svg" alt="seta"></a></li>
+                    </ul>
+
+                   <div class="user mt-3 p-1 dropdown">
+                    <img  class="foto-user" src="images/facebook_1666284955583_6988905654343355665.jpg" alt="imagem perfil">
+                    Naiara Pelozi
+                   
+                    <a  href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img  onclick="mudar_imagem()"   id="seta-down" src="icons/bxs-down-arrow.svg" alt="cliente" class=" btn  dropdown-toggle">
+                        <img  onclick="mudar_imagem()"   id="seta-up" src="icons/bxs-up-arrow.svg" alt="cliente" class=" btn  dropdown-toggle">
+                    </a>
+                      
+                        <div class="dropdown-menu  mt-4 mr-3 bg-dropdown" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item  item-dropdown"  href="#">Conta</a>
+                          <a class="dropdown-item  item-dropdown"  href="#">Perfil</a>
+                          <a class="dropdown-item  item-dropdown" href="#">Configurações</a>
+                          <hr class="hr-dropdown">
+                          <a class="dropdown-item  item-dropdown" href="#">Sair</a>
+                        </div>
+                   
+
+                   </div>
+
+                </nav>
+            </div>
+
+            <section id="bgMenu1" class="menu1">
+                <span id="saudacao" ><h1>Bom dia</h1></span>
+
+                <div class="cards1">
+                    
+                    <div class="box1 box" onmouseover="aparecer(c1,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c1,bgMenu1,bgNav,bgBody)">
+                        <img class="img-card" src="images/Blippi.jfif" alt="blippi">
+                            <span class="ml-1">Blippi </span> 
+                            <button id="c1" class="circle">
+                                <img class="img-play" src= "images/media_play.png" alt="play">
+                            </button>
+                    </div>
+                        
+                    
+                     <div class="box2 box"  onmouseover="aparecer(c2,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c2,bgMenu1,bgNav,bgBody)">
+                            <img class="img-card" src="images/prancha2.png" alt="varidados">
+                            <span class="ml-1">Favoritas/2022</span>
+                            <button id="c2" class="circle">
+                                <img class="img-play" src= "images/media_play.png" alt="play">
+                            </button>
+                        </div>
+                        
+                   
+                    <div class="box3 box"  onmouseover="aparecer(c3,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c3,bgMenu1,bgNav,bgBody)">
+                        <img class="img-card" src="images/pexels-erik-schereder-10630985.jpg" alt="variados">
+                        <span class="ml-1">My life is a movie</span>
+                        <button id="c3" class="circle">
+                            <img class="img-play" src= "images/media_play.png" alt="play">
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="cards1">
+                    
+                    <div class="box1 box"  onmouseover="aparecer(c4,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c4,bgMenu1,bgNav,bgBody)">
+                        <img class="img-card" src="images/prancha1.png" alt="blippi">
+                            <span class="ml-1">Faixas do Shazen</span> 
+                            <button id="c4" class="circle">
+                                <img class="img-play" src= "images/media_play.png" alt="play">
+                            </button>
+                    </div>
+                        
+                    
+                     <div class="box2 box"  onmouseover="aparecer(c5,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c5,bgMenu1,bgNav,bgBody)">
+                            <img class="img-card" src="images/bita.png" alt="varidados">
+                            <span class="ml-1">A mãe/Dudi</span>
+                            <button id="c5" class="circle">
+                                <img class="img-play" src= "images/media_play.png" alt="play">
+                            </button>
+                        </div>
+                        
+                   
+                    <div class="box3 box"  onmouseover="aparecer(c6,bgMenu1,bgNav,bgBody)" onmouseout="sumir(c6,bgMenu1,bgNav,bgBody)">
+                        <img class="img-card" src="images/arctic3.jfif" alt="variados">
+                        <span class="ml-1">The Car</span>
+                        <button id="c6" class="circle">
+                            <img class="img-play" src= "images/media_play.png" alt="play">
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="menu2">
+                <h1>Seus mixes mais ouvidos</h1>
+                <a href="#"><h6>ver tudo</h6></a>
+                <div class="cards2">
+                    <div class="box4">
+                        <img class="img-card2" src="images/2.jfif"  alt="variados">
+                        <p class="titulo">Mix anos 2000</p>
+                        <p>Kasanian, Beirut, The National e mais</p>
+                    </div>
+                    <div class="box5">
+                        <img class="img-card2" src="images/large.jfif"  alt="variados">
+                        <p class="titulo">Mix indie</p>
+                        <p>The Last Shadow Puppets e mais</p>
+                    </div>
+                    <div class="box6">
+                        <img class="img-card2" src="images/biaenino.jfif"  alt="variados">
+                        <p class="titulo"> Mix infantil</p>
+                        <p>Bita, Bob Zoom, Bolofofos e mais</p>
+                    </div>
+                    <div class="box7">
+                        <img class="img-card3" src="images/arctic3.jfif"  alt="variados">
+                        <p class="titulo2">The Car</p>
+                        <p>Arctic Monkeys</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+        <footer>
+            <div class="footer-main d-flex justify-content-between  mt-5 mb-3">
+                <ul class="footer-ul">
+                    <li class="title-ul">Empresa</li>
+                    <li>Sobre</li>
+                    <li>Empregos</li>
+                    <li>For the Road</li>
+                </ul>
+                <ul class="footer-ul">
+                    <li class="title-ul">Comunidades</li>
+                    <li>Para Artistas</li>
+                    <li>Desenvolvedores</li>
+                    <li>Publicidade</li>
+                    <li>Investidores</li>
+                    <li>Fornecedores</li>
+                </ul>
+                <ul class="footer-ul">
+                    <li class="title-ul">Links Úteis</li>
+                    <li>Suporte</li>
+                    <li>Aplicativo móvel grátis</li>
+                </ul>
+                <ul class="footer-ul">
+                    <li>
+                        <div class="text-center pt-1 ">
+                            <a href="#" class="icon-social mb-5 mr-5" target="_blank">
+                                <i class="p-3 fab fa-instagram fa-lg"></i>
+                                <i class="p-3 fab fa-twitter fa-lg"></i>
+                                <i class="p-3  fab fa-facebook-square fa-lg"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr class="footer-hr">
+            <div class="footer-bottom">
+                <ul class="d-flex justify-content-between  mt-5 mb-3">
+                    <li class="ml-1">Legal</li>
+                    <li class="mr-5">Centro de Privacidade</li>
+                    <li class="mr-5">Politica de privacidade</li>
+                    <li class="mr-5">Cookies</li>
+                    <li class="mr-5">Sobre anúncios</li>
+                    <li class="mr-5">&copy; 2022 Spotify AB</li>
+                </ul>
+                <p></p>
+            </div>
+        </footer>
+
+
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+</html>
